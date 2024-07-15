@@ -8,8 +8,8 @@ Server:
 
   Setup Endpoints: 
     Public Endpoints:
-      ☐ / @started(24-07-15 12:09)
-      ☐ /download/
+      ✔ / @started(24-07-15 12:09) @done(24-07-15 13:02) @lasted(53m16s)
+      ✔ /download/ @done(24-07-15 13:02)
     Files Endpoint: 
       ☐ files/upload/
       ☐ files/download/
