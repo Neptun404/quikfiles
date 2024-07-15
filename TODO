@@ -23,7 +23,7 @@ Server:
       ☐ files/download/
 
 Client:
-  ☐ Design website
-  ☐ Implement website
+  ✔ Design website @done(24-07-15 13:57)
+  ☐ Implement website @started(24-07-15 13:57)
   ☐ Implement file upload
   ☐ Implement file download
