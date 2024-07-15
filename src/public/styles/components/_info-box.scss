@@ -8,7 +8,7 @@
   background: variables.$lightblue;
   border-radius: calc(6px * variables.$multiplier);
   padding: calc(8px * variables.$multiplier) calc(12px * variables.$multiplier);
-  margin-bottom: calc(16px * variables.$multiplier);
+  margin: 0px auto calc(16px * variables.$multiplier) auto;
 
   &__title {
     color: variables.$darkblue;
@@ -16,5 +16,32 @@
 
   &__description {
     text-align: center;
+  }
+
+  @media only screen and (min-width: 480px) {
+    max-width: 460px;
+
+    &__title,
+    &__description {
+      font-size: 18px;
+    }
+  }
+
+  @media only screen and (min-width: 960px) {
+    max-width: 600px;
+    padding: calc(16px * variables.$multiplier)
+      calc(22px * variables.$multiplier);
+
+    &__title,
+    &__description {
+      font-size: 21px;
+    }
+  }
+
+  @media only screen and (min-width: 1440px) {
+    p {
+      font-size: 24px;
+      color: brown;
+    }
   }
 }
