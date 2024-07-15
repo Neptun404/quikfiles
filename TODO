@@ -3,7 +3,7 @@
 
 Server:
   ✔ Startup a server @today @started(24-07-15 10:48) @done(24-07-15 12:07) @lasted(1h20m)
-  ☐ Setup endpoints @started(24-07-15 12:09)
+  ✔ Setup endpoints @started(24-07-15 12:09) @done(24-07-15 13:55) @lasted(1h46m25s)
   ☐ Implement Functionality
 
   Setup Endpoints: 
