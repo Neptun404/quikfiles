@@ -11,8 +11,8 @@ Server:
       ✔ / @started(24-07-15 12:09) @done(24-07-15 13:02) @lasted(53m16s)
       ✔ /download/ @done(24-07-15 13:02)
     Files Endpoint: 
-      ☐ files/upload/ @started(24-07-15 13:04)
-      ☐ files/download/ @started(24-07-15 13:04)
+      ✔ files/upload/ @started(24-07-15 13:04) @done(24-07-15 13:53) @lasted(49m36s)
+      ✔ files/download/ @started(24-07-15 13:04) @done(24-07-15 13:53) @lasted(49m38s)
 
   Implement Endpoints:
     Public:
