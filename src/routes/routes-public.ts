@@ -9,6 +9,9 @@ const publicRoutes: FastifyPluginCallback = async (
         return "Hello World"
     })
 
+    fast.get('/download/', async (req, repl) => {
+        return "Download world"
+    })
 }
 
 export default publicRoutes
