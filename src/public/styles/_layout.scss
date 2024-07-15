@@ -1,3 +1,5 @@
+@use "./abstracts/variables"
+
 * {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
@@ -5,4 +7,8 @@
 body {
   margin: 0;
   padding: 0;
+}
+
+section {
+  padding: calc(14px * variables.$multiplier) calc(16px * variables.$multiplier);
 }
