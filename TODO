@@ -25,5 +25,6 @@ Server:
 Client:
   ✔ Design website @done(24-07-15 13:57)
   ☐ Implement website @started(24-07-15 13:57)
+    ☐ Implement download page
   ☐ Implement file upload
   ☐ Implement file download
