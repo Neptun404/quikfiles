@@ -1,0 +1,22 @@
+@use '../abstracts/variables';
+
+.cta-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60%;
+  padding: calc(3px * variables.$multiplier);
+  border-radius: calc(3px * 1.625);
+  transition: 1s all ease;
+  background: variables.$blue;
+  border: 0;
+
+  &__icon {
+    margin-right: 0.5em;
+  }
+
+  &__text {
+    color: variables.$white;
+    font-weight: bold;
+  }
+}
