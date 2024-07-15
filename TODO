@@ -1,0 +1,29 @@
+
+
+
+Server:
+  ✔ Startup a server @today @started(24-07-15 10:48) @done(24-07-15 12:07) @lasted(1h20m)
+  ☐ Setup endpoints @started(24-07-15 12:09)
+  ☐ Implement Functionality
+
+  Setup Endpoints: 
+    Public Endpoints:
+      ☐ / @started(24-07-15 12:09)
+      ☐ /download/
+    Files Endpoint: 
+      ☐ files/upload/
+      ☐ files/download/
+
+  Implement Endpoints:
+    Public:
+      ☐ /
+      ☐ /download/
+    Files:
+      ☐ files/upload/
+      ☐ files/download/
+
+Client:
+  ☐ Design website
+  ☐ Implement website
+  ☐ Implement file upload
+  ☐ Implement file download
