@@ -1,0 +1,20 @@
+@use '../abstracts/variables';
+
+.info-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: variables.$lightblue;
+  border-radius: calc(6px * variables.$multiplier);
+  padding: calc(8px * variables.$multiplier) calc(12px * variables.$multiplier);
+  margin-bottom: calc(16px * variables.$multiplier);
+
+  &__title {
+    color: variables.$darkblue;
+  }
+
+  &__description {
+    text-align: center;
+  }
+}
