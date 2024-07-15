@@ -7,7 +7,8 @@ const fastify = Fastify({
 })
 
 
-fastify.register(import('./routes/routes-public.js'), { logLevel: 'warn' })
+fastify.register(import('./routes/routes-public.js'), { logLevel: 'warn', prefix: '/' })
+fastify.register(import('./routes/routes-file.js'), { logLevel: 'info', prefix: '/file' })
 
 try {
     const { PORT, HOST } = process.env
