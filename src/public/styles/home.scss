@@ -28,6 +28,11 @@
   @media only screen and (min-width: 1024px) {
     height: calc(250px * 1.625);
   }
+
+  .download-page {
+    color: variables.$blue;
+    margin-top: 12px;
+  }
 }
 
 .hero {
