@@ -6,6 +6,7 @@ const fastify = Fastify({
     logger: true
 })
 
+fastify.register(import('@fastify/cors'), { origin: false })
 
 fastify.register(import('./routes/routes-public.js'), { logLevel: 'warn', prefix: '/' })
 fastify.register(import('./routes/routes-file.js'), { logLevel: 'info', prefix: '/file' })
