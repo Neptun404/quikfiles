@@ -7,6 +7,13 @@ const fastify = Fastify({
 })
 
 fastify.register(import('@fastify/cors'), { origin: false })
+fastify.register(import('@fastify/multipart'), {
+    attachFieldsToBody: true,
+    limits: {
+        files: 1,
+        fileSize: 1000 * 1000 * 1000 * 1000
+    }
+})
 
 fastify.register(import('./routes/routes-public.js'), { logLevel: 'warn', prefix: '/' })
 fastify.register(import('./routes/routes-file.js'), { logLevel: 'info', prefix: '/file' })
