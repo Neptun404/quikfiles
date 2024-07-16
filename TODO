@@ -29,5 +29,5 @@ Client:
   ✔ Design website @done(24-07-15 13:57)
   ✔ Implement website @started(24-07-15 13:57) @done(24-07-16 12:42) @lasted(22h45m5s)
     ✔ Implement download page @started(24-07-16 11:49) @done(24-07-16 12:28) @lasted(39m5s)
-  ☐ Implement file upload
+  ☐ Implement file upload @started(24-07-16 15:20)
   ☐ Implement file download
