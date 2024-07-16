@@ -35,6 +35,15 @@
   }
 }
 
+.file-select-input {
+  display: none;
+}
+
+// 👎 Change this next time
+.hero__file-select label {
+  cursor: pointer;
+}
+
 .hero {
   &__file-select,
   &__file-selected {
