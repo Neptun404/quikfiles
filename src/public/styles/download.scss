@@ -1,0 +1,61 @@
+@forward 'layout';
+@use './components/cta-button';
+@use './components/header';
+@use './components/info-box';
+@use './abstracts/variables';
+
+.download-section {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  @media only screen and (min-width: 480px) {
+    height: calc(200px * 1.625);
+    max-width: calc(380px * 1.625);
+  }
+
+  @media only screen and (min-width: 1024px) {
+    height: calc(250px * 1.625);
+  }
+
+  .upload-link {
+    color: variables.$blue;
+    margin-top: 12px;
+  }
+}
+
+.download-form {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: calc(12px * variables.$multiplier);
+  max-width: 480px;
+
+  &__label {
+    display: flex;
+    padding: 6px * variables.$multiplier;
+    border-radius: 6px * variables.$multiplier;
+
+    &-icon {
+      margin: 3px * variables.$multiplier;
+    }
+  }
+
+  &__label,
+  &__label input {
+    width: 100%;
+    box-sizing: border-box;
+    border: 0;
+    color: variables.$darkblue;
+    background: variables.$lightblue;
+  }
+
+  .cta-btn {
+    width: 100%;
+  }
+}
