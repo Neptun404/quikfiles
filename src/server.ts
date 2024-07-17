@@ -1,9 +1,18 @@
 import "dotenv/config"
 import Fastify from "fastify"
 import process from "process"
+import path from "path"
 
 const fastify = Fastify({
     logger: true
+})
+
+import { dirname } from 'path';
+import { fileURLToPath } from 'url';
+    
+const __dirname = dirname(fileURLToPath(import.meta.url));
+fastify.register(import('@fastify/static'), {
+    root: path.join(__dirname, '../release/public')
 })
 
 fastify.register(import('@fastify/cors'), { origin: false })
