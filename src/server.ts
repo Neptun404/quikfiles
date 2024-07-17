@@ -22,7 +22,7 @@ fastify.register(import('@fastify/multipart'), {
     // attachFieldsToBody: true,
     limits: {
         files: 1,
-        fileSize: 1000 * 1000 * 1 // 1mb
+        fileSize: 1000 * 1000 * 1.1 // 1.1mb
     }
 })
 
