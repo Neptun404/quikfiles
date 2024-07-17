@@ -20,9 +20,10 @@ const fileRoutes: FastifyPluginAsync = async (fast, opts) => {
         const buffer = await bufferFile(data)
         if (buffer.truncated || buffer.buffer === null) {
             repl.statusCode = 413
-            return `${data.filename} is too large`
+            return {
+                message: `${data.filename} is too large`
+            }
         }
-
 
         // Get file extention
         const { filename, fileExtension } = (() => {
