@@ -3,9 +3,7 @@ import { FastifyPluginAsync } from "fastify";
 // import fs from 'fs/promises';
 
 
-import fs from 'fs';
 import util from 'util';
-import path, { join } from 'path';
 import { pipeline } from 'stream';
 const pump = util.promisify(pipeline)
 import { PrismaClient } from "@prisma/client";
@@ -66,8 +64,6 @@ const fileRoutes: FastifyPluginAsync = async (fast, opts) => {
             }
         }).catch(e => console.error(e))
 
-        console.log(fileLink);
-
         return {
             message: `${filename} uploaded`,
             fileID: objectId
@@ -85,7 +81,6 @@ const fileRoutes: FastifyPluginAsync = async (fast, opts) => {
                 where: { id }
             })
 
-            console.log(query);
             return {
                 name: query.name,
                 link: query.uri
