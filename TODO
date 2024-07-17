@@ -23,7 +23,12 @@ Server:
       ☐ files/download/
 
   Tasks:
-    ☐ Implement upload file size constrainrs
+    ✔ Implement upload file size constrainrs @done(24-07-17 09:19)
+
+Database:
+  ✔ Create quikfile database @done(24-07-17 10:13)
+  ✔ Create tables @done(24-07-17 10:13)
+    ✔ FileLinks @done(24-07-17 10:13)
 
 Client:
   ✔ Design website @done(24-07-15 13:57)
