@@ -8,10 +8,10 @@ const fastify = Fastify({
 
 fastify.register(import('@fastify/cors'), { origin: false })
 fastify.register(import('@fastify/multipart'), {
-    attachFieldsToBody: true,
+    // attachFieldsToBody: true,
     limits: {
         files: 1,
-        fileSize: 1000 * 1000 * 1000 * 1000
+        fileSize: 1000 * 1000 * 1000 // 1mb
     }
 })
 
