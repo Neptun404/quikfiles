@@ -19,8 +19,8 @@ Server:
       ☐ /
       ☐ /download/
     Files:
-      ☐ files/upload/ @started(24-07-16 16:39)
-      ☐ files/download/
+      ✔ files/upload/ @started(24-07-16 16:39) @done(24-07-17 12:48) @lasted(20h9m18s)
+      ✔ files/download/ @done(24-07-17 12:48)
 
   Tasks:
     ✔ Implement upload file size constrainrs @done(24-07-17 09:19)
