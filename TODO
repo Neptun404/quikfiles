@@ -16,8 +16,8 @@ Server:
 
   Implement Endpoints:
     Public:
-      ☐ /
-      ☐ /download/
+      ✔ / @done(24-07-17 15:46)
+      ✔ /download/ @done(24-07-17 15:46)
     Files:
       ✔ files/upload/ @started(24-07-16 16:39) @done(24-07-17 12:48) @lasted(20h9m18s)
       ✔ files/download/ @done(24-07-17 12:48)
@@ -34,8 +34,8 @@ Client:
   ✔ Design website @done(24-07-15 13:57)
   ✔ Implement website @started(24-07-15 13:57) @done(24-07-16 12:42) @lasted(22h45m5s)
     ✔ Implement download page @started(24-07-16 11:49) @done(24-07-16 12:28) @lasted(39m5s)
-  ☐ Implement file upload @started(24-07-16 15:20)
-    ☐ Implement response checking
-    ☐ Display error message if failed to upload
-    ☐ Redirect user to download page if success
-  ☐ Implement file download
+  ✔ Implement file upload @started(24-07-16 15:20) @done(24-07-17 15:46) @lasted(1d26m50s)
+    ✔ Implement response checking @done(24-07-17 15:46)
+    ✔ Display error message if failed to upload @done(24-07-17 15:46)
+    ✔ Redirect user to download page if success @done(24-07-17 15:46)
+  ✔ Implement file download @done(24-07-17 15:46)
