@@ -6,11 +6,11 @@ const publicRoutes: FastifyPluginCallback = async (
     done,
 ) => {
     fast.get('/', async (req, repl) => {
-        return "Hello World"
+        return repl.sendFile('index.html')
     })
 
     fast.get('/download/', async (req, repl) => {
-        return "Download world"
+        return repl.sendFile('download.html')
     })
 }
 
