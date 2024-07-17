@@ -15,12 +15,14 @@ fastify.register(import('@fastify/static'), {
     root: path.join(__dirname, '../release/public')
 })
 
-fastify.register(import('@fastify/cors'), { origin: false })
+fastify.register(import('@fastify/cors'), {
+    origin: true,
+})
 fastify.register(import('@fastify/multipart'), {
     // attachFieldsToBody: true,
     limits: {
         files: 1,
-        fileSize: 1000 * 1000 * 1000 // 1mb
+        fileSize: 1000 * 1000 * 1 // 1mb
     }
 })
 
