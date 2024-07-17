@@ -10,7 +10,8 @@
     "dotenv": "^16.4.5",
     "fastify": "^4.28.0",
     "fastify-plugin": "^4.5.1",
-    "scss": "^0.2.4"
+    "scss": "^0.2.4",
+    "short-uuid": "^5.2.0"
   },
   "name": "quikfiles",
   "version": "1.0.0",
