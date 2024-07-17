@@ -23,11 +23,13 @@ const SelectedFile = (() => {
 })();
 
 fileSelectInput.addEventListener('input', async (_) => {
-  if (fileSelectInput.files < 1) return; // Check if user selected a file
+  if (fileSelectInput.files.length < 1) return; // Check if user selected a file
 
   const fileObj = fileSelectInput.files[0];
   SelectedFile.name = fileObj.name;
   SelectedFile.file = fileObj;
+  document.querySelector('.selected-file__name').textContent =
+    SelectedFile.name;
 
   // If a file is selected
   // 1. Hide file select section
@@ -47,12 +49,30 @@ async function uploadFile(file) {
   formData.append('file', SelectedFile.file);
   formData.append('name', SelectedFile.name);
 
-  const host = 'http://127.0.0.1:3000/file/upload';
-  const response = await fetch(host, {
-    body: 'formData',
-    method: 'post',
-    mode: 'no-cors',
-  });
+  const host = '/file/upload';
 
-  // Continue here after implementing server side file uploading
+  try {
+    const response = await fetch(host, {
+      body: formData,
+      method: 'post',
+      // mode: 'no-cors',
+    });
+
+    const body = await response.json();
+
+    if (response.status === 413) {
+      alert('File is too larger than 1mb');
+      return;
+    }
+
+    prompt(
+      `
+    Upload Completed
+    Please note down the file ID below
+  `,
+      body.fileID
+    );
+  } catch (error) {
+    alert(error);
+  }
 }
