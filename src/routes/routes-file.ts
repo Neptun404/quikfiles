@@ -36,7 +36,8 @@ const fileRoutes: FastifyPluginAsync = async (fast, opts) => {
         })()
 
         // Generate an s3 object key with the file extention
-        const objectKey = shortUUID.generate().toLocaleLowerCase()
+        const objectId = shortUUID.generate().toLocaleLowerCase(),
+            objectKey = `${objectId}.${fileExtension}`
 
         // TODO Save file into s3
         const s3client = new S3Client({
@@ -53,7 +54,7 @@ const fileRoutes: FastifyPluginAsync = async (fast, opts) => {
         }))
 
         // Build s3 uri link
-        const objectURI = `https://quikfilesbucket.s3.ap-southeast-1.amazonaws.com/${objectKey}.${fileExtension}`
+        const objectURI = `https://quikfilesbucket.s3.ap-southeast-1.amazonaws.com/${objectKey}`
 
         // Save file link into database
         const prisma = new PrismaClient()
@@ -61,7 +62,7 @@ const fileRoutes: FastifyPluginAsync = async (fast, opts) => {
             data: {
                 uri: objectURI,
                 name: filename,
-                id: objectKey
+                id: objectId
             }
         }).catch(e => console.error(e))
 
@@ -69,14 +70,32 @@ const fileRoutes: FastifyPluginAsync = async (fast, opts) => {
 
         return {
             message: `${filename} uploaded`,
-            fileID: objectKey
+            fileID: objectId
         }
     })
 
     fast.get('/download/:id', async (req, repl) => {
         const { id } = req.params as { id: string }
 
-        return `Downloading file with id ${id}`
+        // Query database for matching id
+        const prisma = new PrismaClient({})
+
+        try {
+            const query = await prisma.fileLink.findFirstOrThrow({
+                where: { id }
+            })
+
+            console.log(query);
+            return {
+                name: query.name,
+                link: query.uri
+            }
+        } catch (error) {
+            repl.statusCode = 404
+            return {
+                message: `ID does not exist or is invalid`
+            }
+        }
     })
 }
 
