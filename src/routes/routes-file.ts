@@ -8,14 +8,10 @@ import util from 'util';
 import path from 'path';
 import { pipeline } from 'stream';
 const pump = util.promisify(pipeline)
-
+import { PrismaClient } from "@prisma/client";
 
 const fileRoutes: FastifyPluginAsync = async (fast, opts) => {
     fast.post('/upload', async (req, repl) => {
-
-        // TODO Implement the required functionality to upload files into s3
-        // const { name, file } = req.body as { name: MultipartValue, file: MultipartFile };
-
         // Gets user uploaded file
         const data = await req.file()
         if (data === undefined) return;
@@ -27,7 +23,21 @@ const fileRoutes: FastifyPluginAsync = async (fast, opts) => {
             return `${data.filename} is too large`
         }
 
-        return `${data?.filename} uploaded`;
+        // TODO Save file into s3
+
+
+        // Save file link into database
+        const prisma = new PrismaClient()
+        const fileLink = await prisma.fileLink.create({
+            data: {
+                link: data.filename
+            }
+        }).catch(e => console.error(e))
+
+        return {
+            message: `${data?.filename} uploaded`,
+            fileID: fileLink!.id
+        }
     })
 
     fast.get('/download/:id', async (req, repl) => {
