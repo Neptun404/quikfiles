@@ -18,8 +18,9 @@
   "main": "app.js",
   "scripts": {
     "start": "node build/server.js",
-    "build": "tsc -watch",
-    "sass": "sass -w src/public:release/public"
+    "build": "tsc -build",
+    "sass": "sass -w src/public:release/public",
+    "sass-build": "sass src/public:release/public"
   },
   "keywords": [],
   "author": "",

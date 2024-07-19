@@ -5,5 +5,4 @@ build
 node_modules
 release/public/styles
 uploads
-prisma/migrations/
 server_test.ts
