@@ -1,8 +1,6 @@
 
 
 .env
-build
 node_modules
-release/public/styles
 uploads
 server_test.ts
